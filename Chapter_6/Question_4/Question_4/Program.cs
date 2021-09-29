@@ -8,7 +8,7 @@ namespace Chapter_6_Question_4
         {
             for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 13; j++ )
+                for (int j = 0; j < 13; j++)
                 {
                     switch (j)
                     {
@@ -26,7 +26,7 @@ namespace Chapter_6_Question_4
                         case 11: Console.Write("Queen"); break;
                         case 12: Console.Write("King"); break;
                     }
-                    switch(i)
+                    switch (i)
                     {
                         case 0: Console.WriteLine(" Of Spades"); break;
                         case 1: Console.WriteLine(" Of Clubs"); break;
