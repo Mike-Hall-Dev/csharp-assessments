@@ -11,7 +11,7 @@ namespace Question_10
             int tempCount, currentNum;
             int mode = 0;
 
-            for (int i = 0; i < array.Length - 1; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 currentNum = array[i];
                 tempCount = 0;
