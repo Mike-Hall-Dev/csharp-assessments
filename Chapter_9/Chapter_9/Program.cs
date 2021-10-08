@@ -6,25 +6,28 @@ namespace Chapter_9
     {
         static void Main(string[] args)
         {
-/*            Console.Write("Please enter a number: ");
+            // Question 2
+            Console.Write("Please enter a number: ");
             int numOne = int.Parse(Console.ReadLine());
             Console.Write("Pleaser enter a second number: ");
             int numTwo = int.Parse(Console.ReadLine());
             Console.Write("Please enter a third number: ");
             int numThree = int.Parse(Console.ReadLine());
 
-            int maxNum = GetMax(numOne, numTwo,numThree);
-            Console.WriteLine(maxNum + " is the max of those three numbers.");*/
+            int maxNum = GetMax(numOne, numTwo, numThree);
+            Console.WriteLine(maxNum + " is the max of those three numbers.");
 
+            // Question 3
             Console.Write("Please enter a number: ");
             string numForEnglish = Console.ReadLine();
             string lastNumInEnglish = GetLastNumInEnglish(numForEnglish);
             Console.WriteLine(lastNumInEnglish);
 
+            // Question 6
             int[] arrOne = { 1, 2, 3, 4, 5, 6 };
             int[] arrTwo = { 1, 5, 2, 3, 4, 8, 0 };
-            Console.WriteLine(GetPeakNum(arrOne));
-            Console.WriteLine(GetPeakNum(arrTwo));
+            Console.WriteLine(GetFirstPeakNumIndex(arrOne));
+            Console.WriteLine(GetFirstPeakNumIndex(arrTwo));
         }
 
         static int GetMax(int numOne, int numTwo, int numThree)
@@ -56,15 +59,15 @@ namespace Chapter_9
             return numToEnglish;
         }
 
-        static int GetPeakNum(int[] arr)
+        static int GetFirstPeakNumIndex(int[] arr)
         {
-            int peakNum = 0;
+            int peakNumIndex = 0;
             for (int i = 1; i < arr.Length - 1; i++)
             {
                 if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])
                 {
-                    peakNum = arr[i];
-                    return peakNum;
+                    peakNumIndex = i;
+                    return peakNumIndex;
                 }
             }
             return -1;
