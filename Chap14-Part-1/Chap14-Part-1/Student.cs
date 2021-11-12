@@ -98,15 +98,33 @@ namespace Chap14_Part_1
 
     class StudentTest
     {
-        static void Main()
+
+        private Student studentOne;
+        private Student studentTwo;
+        private Student studentThree;
+        private Student studentFour;
+
+        private Student StudentOne { get => studentOne; set => studentOne = value; }
+        private Student StudentTwo { get => studentTwo; set => studentTwo = value; }
+        private Student StudentThree { get => studentThree; set => studentThree = value; }
+        private Student StudentFour { get => studentFour; set => studentFour = value; }
+
+        public StudentTest()
+        {}
+
+        public StudentTest(Student one, Student two, Student three, Student four)
         {
-            Student studentOne = new Student();
+            StudentOne = one;
+            StudentTwo = two;
+            StudentThree = three;
+            StudentFour = four;
+        }
+
+        public void PrintStudents()
+        {
             studentOne.Display();
-            Student studentTwo = new Student("Bob Ross");
             studentTwo.Display();
-            Student studentThree = new Student("Philip J Fry", "Fundamentals of Computer Programming");
             studentThree.Display();
-            Student studentFour = new Student("Ric Flair", "Code 101", "Computer Science", "University of Missouri");
             studentFour.Display();
         }
     }
