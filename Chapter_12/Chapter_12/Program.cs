@@ -87,7 +87,7 @@ namespace Chapter_12
                 string readText = File.ReadAllText(path);
                 Console.WriteLine(readText);
             }
-            catch(FileNotFoundException)
+            catch (FileNotFoundException)
             {
                 Console.WriteLine(string.Format("No file found {0}", path));
             }
@@ -95,6 +95,9 @@ namespace Chapter_12
             {
                 Console.WriteLine("Bad file.");
             }
+            
+
+
         }
 
         static void QuestionThirteen(string address)
@@ -104,8 +107,8 @@ namespace Chapter_12
                 Uri addressUri = new Uri(address);
                 using (WebClient client = new WebClient())
                 {
-                    client.DownloadFile(addressUri, @"C:\Users\Mike.Hall\Desktop\test.jpg");
                     Console.WriteLine("Downloading...");
+                    client.DownloadFile(addressUri, @"C:\Users\Mike.Hall\Desktop\test.jpg");
                     Console.WriteLine("Success!");
                 }
             }
