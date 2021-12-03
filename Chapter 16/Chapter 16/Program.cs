@@ -8,18 +8,17 @@ namespace Chapter_16
     {
         static void Main(string[] args)
         {
-            /*            List<int> testList = buildIntegerList();
-                        Console.WriteLine(testList.Sum());*/
+            //List<int> testList = buildIntegerList();
+            //Console.WriteLine(testList.Sum());
 
             //int[] test = { 2, 2, 3, 3, 2, 3, 4, 3, 3 };
-
             //findMajorant(test);
 
             //countOccurancesInArray(test);
 
             List<int> test2 = new List<int>(){ 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2, 6, 6, 6 };
-
             removeOddOccurances(test2);
+            foreach (int num in test2) Console.Write(num + " ");
         }
 
         public static List<int> buildIntegerList()
@@ -101,7 +100,7 @@ namespace Chapter_16
             Console.Write("|");
         }
 
-        static void removeOddOccurances(List<int> numList)
+        static List<int> removeOddOccurances(List<int> numList)
         {
             Dictionary<int,int> numDict = new Dictionary<int, int>();
 
@@ -117,10 +116,6 @@ namespace Chapter_16
                 }
             }
 
-            foreach (KeyValuePair<int, int> entry in numDict)
-            {
-                Console.WriteLine(entry.Key + " : " + entry.Value);
-            }
             for (int i = 0; i < numList.Count; i++)
             {
                 if (numDict[numList[i]] % 2 != 0)
@@ -129,8 +124,7 @@ namespace Chapter_16
                     i--;
                 }
             }
-
-            foreach (int num in numList) Console.WriteLine(num);
+            return numList;
         }
     }
 }
